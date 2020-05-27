@@ -75,10 +75,12 @@ block container
                     a(href="/product-analytics-101/")
                         strong &gt;&gt; Learn more
 
-            h2.text-center Latest articles
+            .row.articles
+                .col
+                    h2.text-center Latest articles
+                    include mixins/post.pug
+                    +posts()
 
-            include mixins/post.pug
-            +posts()
 
 block pagination
     include mixins/paginator.pug
