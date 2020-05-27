@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
+title: 'ANELEN Data articles'
+subtitle: 'Sharing our insights and best practices'
+description: 'The articles from ANELEN, discussing the strategy and techniques of Data Science, Data Engineering, and Analytics.'
+keywords: blog
+author: ANELEN Co., LLC
 language: en
-timezone: ''
+timezone: 'America/Los_Angeles'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://articles.anelen.co
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -93,9 +93,13 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: anelen
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+marked:
+  gfm: true
+  breaks: false
