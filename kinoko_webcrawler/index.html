@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> A web-crawler-driven ETL that collects data from anywhere · ANELEN articles</title><meta name="description" content="A web-crawler-driven ETL that collects data from anywhere - ANELEN Co., LLC"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" sizes="180x180" href="https://anelen.co/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" sizes="192x192" href="https://anelen.co/assets/img/favicons/android-icon-192x192.png"><link rel="icon" sizes="32x32" ref="https://anelen.co/assets/img/favicons/favicon-32x32.png"><link rel="stylesheet" href="https://anelen.co/assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://anelen.co/assets/css/styles.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="https://anelen.co/assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://anelen.co/assets/fonts/fontawesome5-overrides.min.css">
+<link rel="stylesheet" href="https://anelen.co/assets/css/styles.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://anelen.co.jp/assets/img/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://anelen.co.jp/assets/img/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://anelen.co.jp/assets/img/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://anelen.co.jp/assets/img/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://anelen.co.jp/assets/img/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://anelen.co.jp/assets/img/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://anelen.co.jp/assets/img/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://anelen.co.jp/assets/img/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://anelen.co.jp/assets/img/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://anelen.co.jp/assets/img/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://anelen.co.jp/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://anelen.co.jp/assets/img/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://anelen.co.jp/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="https://anelen.co.jp/assets/img/favicons/manifest.json">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93160325-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    </script>
+<!-- End Global site tag (gtag.js) - Google Analytics -->
+<meta name="description" content="Extracting and organizing the data is the first step before any analysis can begin. Ironically, this first step is the most challenging part of analytics in many organizations. Anelen introduced kinok">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A web-crawler-driven ETL that collects data from anywhere">
+<meta property="og:url" content="http://articles.anelen.co/kinoko_webcrawler/index.html">
+<meta property="og:site_name" content="ANELEN articles">
+<meta property="og:description" content="Extracting and organizing the data is the first step before any analysis can begin. Ironically, this first step is the most challenging part of analytics in many organizations. Anelen introduced kinok">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.anelen.co/assets/img/uhaul_price.png">
+<meta property="og:image" content="https://www.anelen.co/assets/img/umi_tyerman.png">
+<meta property="og:image" content="https://www.anelen.co/assets/img/kinoko_webcrawler.png">
+<meta property="og:image" content="https://www.anelen.co/assets/img/student_teacher_ratio.png">
+<meta property="article:published_time" content="2020-05-12T07:00:00.000Z">
+<meta property="article:modified_time" content="2020-05-27T18:55:58.018Z">
+<meta property="article:author" content="ANELEN Co., LLC">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.anelen.co/assets/img/uhaul_price.png"><link rel="search" type="application/opensearchdescription+xml" href="http://articles.anelen.co/atom.xml" title="ANELEN articles"><meta name="generator" content="Hexo 4.2.1"></head><body><div class="modal fade" role="dialog" tabindex="-1" id="cookieconsent">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><strong>We are care about privacy and rights</strong></h4>
+        <button type="button" class="close hidden" data-dismiss="modal" aria-label="Close" id="acceptcookie1" style="visibility: hidden;"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <p>So we want to let you know that we use cookies to track web visit data like many other commercial websites. We use them for a historical research to improve the visitor and customer experience. If you continue using our website, we'll assume that you agree to receive all cookies on this website.&nbsp;<a href="https://www.iubenda.com/privacy-policy/8056022" target="_blank" rel="noopener">Learn&nbsp;more</a></p>
+      </div>
+      <div class="modal-footer" style="background-image: url('https://anelen.co/assets/img/logo.png');background-size: contain;background-repeat: no-repeat;background-position: 10% 10%;margin: 15px;border-top: 0px;">
+        <button class="btn btn-primary" id="acceptcookie2" data-dismiss="modal" type="button">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-button"><div class="container"><a class="navbar-brand" href="https://anelen.co" target="_self">ANELEN articles</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navcol-1"><ul class="nav navbar-nav mr-auto"><li class="nav-item" role="presentation"><!-- - var tar = re.test(value) ? "_blank" : "_self"--><a class="nav-link" href="https://anelen.co/data-engineering.html" target="_self">Data Engineering</a></li><li class="nav-item" role="presentation"><!-- - var tar = re.test(value) ? "_blank" : "_self"--><a class="nav-link" href="https://anelen.co/analytics.html" target="_self">Analytics</a></li><li class="nav-item" role="presentation"><!-- - var tar = re.test(value) ? "_blank" : "_self"--><a class="nav-link" href="https://anelen.co/stats_ml.html" target="_self">Statistics and Machine Learning</a></li><li class="nav-item" role="presentation"><!-- - var tar = re.test(value) ? "_blank" : "_self"--><a class="nav-link" href="https://anelen.co/about.html" target="_self">Our story</a></li><li class="nav-item" role="presentation"><!-- - var tar = re.test(value) ? "_blank" : "_self"--><a class="nav-link" href="/index.html" target="_self">Articles</a></li></ul></div></div></nav><div class="article-clean"><div class="container"><div class="row"> </div><div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2"><div class="intro"><h1 class="text-center">A web-crawler-driven ETL that collects data from anywhere</h1></div><!-- +postInfo(page)--><div class="post-content"><p>Extracting and organizing the data is the first step before any analysis can begin. Ironically, this first step is the most challenging part of analytics in many organizations.</p>
+<p>Anelen <a href="https://anelen.co/kinoko.html" target="_blank" rel="noopener">introduced kinoko.io</a> earlier this year. It’s a tailor-made ETL process for each client so we can collect the data from non-major and proprietary cloud applications. Such data sources are not typically supported by boilerplate ETL services. ETL services including kinoko.io access the data from the Application Programming Interface (API). However, in many circumstances, the data we need may exist somewhere not accessed through API.</p>
+<p>The price information on U-Haul, a truck rental company, is a good example of the data only available through web pages:</p>
+<p><img src="https://www.anelen.co/assets/img/uhaul_price.png" alt="uhaul"></p>
+<p><a href="https://www.cnbc.com/2020/02/08/twitter-ceo-jack-dorsey-san-francisco-comments-a-warning-sign.html" target="_blank" rel="noopener">Recent news</a>
+reported the tech companies started to move their workforce to other areas.
+Even before that, people have been leaving the San Francisco Bay Area due to the high cost of living.
+<a href="https://www.sfchronicle.com/bayarea/article/Bay-Area-migration-Coronavirus-prompts-residents-15225445.php" target="_blank" rel="noopener">The coronavirus pandemic seems to have only reinforced this trend</a>.
+As a result, one-way truck rental prices from the Bay Area to outside destinations have been much higher than the opposite directions. Jabus Tyerman came up with an index called “U-Haul Moving Index” (UMI) to show the asymmetricity of the rental truck prices:</p>
+<p><img src="https://www.anelen.co/assets/img/umi_tyerman.png" alt="umi"></p>
+<p>(The figure adopted from <a href="https://jabustyerman.com/2018/06/19/u-haul-pricing-asymmetries-and-real-time-trends-in-us-city-migration/" target="_blank" rel="noopener">U-Haul pricing and where people are moving</a>)</p>
+<p>As you can see at the top of the figure above, the cities in the Silicon Valley such as San Jose, Oakland, San Francisco, and Fremont are the most expensive pickup location of the rental truck.</p>
+<p>According to
+<a href="https://jabustyerman.com/2018/06/19/u-haul-pricing-asymmetries-and-real-time-trends-in-us-city-migration/" target="_blank" rel="noopener">his article</a>,
+Tyerman collected the prices from the pickup-dropoff combinations of the top 100 populated US cities. That is 10,000 price entries. I don’t know how he collected the data from U-Haul. But if he collected from the U-Haul web site, he would need to either manually navigate the web site, or create a program to automatically crawl the pages to extract the data.</p>
+<h2 id="Web-crawler-ETL-pipeline-on-kinoko-io"><a href="#Web-crawler-ETL-pipeline-on-kinoko-io" class="headerlink" title="Web crawler + ETL pipeline on kinoko.io"></a>Web crawler + ETL pipeline on kinoko.io</h2><p>I added the web crawling capability to kinoko.io so we can collect the data like U-Haul price information from the web, clean, organize, and store on the data warehouse like Google BigQuery and AWS Redshift.</p>
+<p><img src="https://www.anelen.co/assets/img/kinoko_webcrawler.png" alt="kinoko webcraler"></p>
+<p>In this framework, the data is extracted, loaded, and transformed in the following manner:</p>
+<ul>
+<li><strong>Step 1:</strong>
+A human identifies the steps to retrieve the information from a single page. While she or he operates the web browser,
+<a href="https://www.selenium.dev/selenium-ide/" target="_blank" rel="noopener">Selenium IDE</a> monitors the keystrokes and mouse clicks and records as a script written in a computer language such as Python. (*)</li>
+<li><strong>Step 2:</strong>
+The Selenium script runs by varying the inputs such as the pickup city and date for the truck rental.</li>
+<li><strong>Step 3:</strong>
+Extract the target data (e.g. price) from the downloaded web resources such as HTML, PDF, and Excel files. A parsing logic must be constructed for the file format and content. Organize the data in a table format.</li>
+<li><strong>Step 4:</strong>
+Using <a href="https://singer.io" target="_blank" rel="noopener">singer.io</a> framework, pass each data record from the singer-tap to the singer-target programs. The singer-target code writes the record to the destination data warehouse.</li>
+</ul>
+<p>Instead of running Step 2 to 4 for one page at a time, we can deploy many processes all at once using <a href="https://aws.amazon.com/fargate/" target="_blank" rel="noopener">AWS Fargate</a> to dramatically shorten the required time.</p>
+<p>*) Many web sites including U-Haul incorporate <a href="https://www.google.com/recaptcha/intro/v3.html" target="_blank" rel="noopener">CAPTCHA</a> and it makes web crawlers more difficult to access the pages. kinoko.io’s crawler automatically connects to thousands of human crowd workers all over the world to pass the CAPTCHA process in a very short amount of time.</p>
+<h2 id="Case-study-Education-statistics-data-on-NCES"><a href="#Case-study-Education-statistics-data-on-NCES" class="headerlink" title="Case study: Education statistics data on NCES"></a>Case study: Education statistics data on NCES</h2><p>As a demonstration, kinoko.io web-crawler was applied to collect the education statistics data on the National Center for Education Statistics. The target data, called Common Core of Data, is a list of over 100,000 public schools. The data contains information such as addresses and phone numbers of each school as well as useful statistics such as the number of students and teachers. The education researchers use the data as a reference for various research.</p>
+<p>The data can be downloaded as Excel files, only after many clicks of page navigation for each state. The download links cannot be guessed because the Excel file is generated dynamically after the user submits the web form.</p>
+<p>To save the research assistants from the finger sprains, kinoko.io web-crawler was configured to simulate the human access on the web page. Then the 50 instances of the crawler were deployed on AWS Fargate. The data extraction finished in a matter of 30 minutes (**), compared to hours of time required for a human research assistant. The crawler program was combined with the kinoko.io ETL process to load the content of each Excel file into the data warehouse (BigQuery).</p>
+<p>(**) This could have been a few minutes instead of 30 minutes if I deployed all the instances simultaneously. I roll out the deployment in an interval so I eliminate the chance of taking down the NCES site.</p>
+<p>After the data quality control, I made this dataset public so the education researchers benefit from this effort. The figure below shows a heatmap of USA counties based on the average student-teacher ratio together with the distribution of the ratio and the counties with the highest student-teacher ratio, potentially indicating negative eduction quality:</p>
+<p><img src="https://www.anelen.co/assets/img/student_teacher_ratio.png" alt="NCES"></p>
+<p>This example, together with the source code to access the data on BigQuery is presented on a public
+<a href="https://colab.research.google.com/drive/10RcILjKnlewK69vbr5krp6s2xCqKCHb1" target="_blank" rel="noopener">Google Colab notebook</a></p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>While most ETL service only supports major cloud applications as a data source, Anelen’s kinoko.io not only accesses any API endpoints but also is capable of collecting data from any web resources (HTML, PDF, Excel, etc) with the web crawling technology. The collected data then organized and stored in the data warehouse. Once the data is in the high-performance data warehouse, we can run complex data analysis combining with the data from other sources and/or create machine-learning applications.</p>
+<h2 id="Find-out-more"><a href="#Find-out-more" class="headerlink" title="Find out more!"></a>Find out more!</h2><p>I hope this introduction was informative and relatable to your business. If you would like to find out more what Anelen can do for your data challenge, please simply contact <a href="mailto:hello@anelen.co">hello@anelen.co</a> (.co, not .com don’t get your email lost elsewhere!) or schedule a free discovery meeting with <a href="https://calendly.com/anelen-discovery" target="_blank" rel="noopener">the scheduler</a>.</p>
+</div></div></div></div><div class="paginator"><a class="next" href="/kinoko-io-etl/">NEXT</a></div><div class="container"><section class="services"><div class="row"><div class="col"><h2>Next: Find out how we can help you</h2></div></div><div class="row articles"><div class="col-sm-6 col-md-4 item text-center"><a href="https://anelen.co/data-engineering.html" target="_self"><img class="img-fluid" src="https://anelen.co/assets/img/analytics_infra.png"></a><a href="https://anelen.co/data-engineering.html" target="_self"><h3 class="name">Data Engineering</h3></a></div><div class="col-sm-6 col-md-4 item text-center"><a href="https://anelen.co/analytics.html" target="_self"><img class="img-fluid" src="https://anelen.co/assets/img/cohort.png"></a><a href="https://anelen.co/analytics.html" target="_self"><h3 class="name">Analytics</h3></a></div><div class="col-sm-6 col-md-4 item text-center"><a href="https://anelen.co/stats_ml.html" target="_self"><img class="img-fluid" src="https://anelen.co/assets/img/measure-effect.png"></a><a href="https://anelen.co/stats_ml.html" target="_self"><h3 class="name">Statistical analysis & machine learning</h3></a></div></div></section></div><section class="call-to-action text-white text-center" style="background-size: cover;background-image: url('https://anelen.co/assets/img/bg_ebbtide.jpg');">
+        <div class="overlay"></div>
+        <div class="col-xl-9 mx-auto">
+            <div class="contact-clean" style="background-color: transparent;">
+                <div class="row">
+                    <div class="col-lg-7 offset-lg-0 text-left mx-auto">
+                        <form id="mc-embedded-subscribe-form" class="validate" action="https://anelen.us17.list-manage.com/subscribe/post?u=2741faf384c559d5568e7998e&amp;amp;id=1e4c20cbb2" method="post" name="mc-embedded-subscribe-form" target="_blank" style="background-color: rgb(248,249,250);">
+                            <h1 style="font-size: 2rem;"><strong>Keep up with data technology trends with our newsletter</strong></h1>
+                            <p>&nbsp;<a href="https://mailchi.mp/7d2fc647ee87/something-to-share-on-happy-1-year-381009" target="_blank">Sample Newsletter</a></p>
+                            <div class="form-group"><label for="mce-FNAME">First name</label><input class="form-control" type="text" id="mce-FNAME" name="FNAME" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"></div>
+                            <div class="form-group"><label for="mce-LNAME">Last name</label><input class="form-control" type="text" id="mce-LNAME" name="LNAME"></div>
+                            <div class="form-group"><label for="mce-EMAIL">Email (required)</label><input class="form-control" type="email" id="mce-EMAIL" name="EMAIL" required="required"></div><button class="btn btn-primary" id="mc-embedded-subscribe" type="submit">get it!</button>
+                            <div style="position: absolute;left: -5000px;" area-hidden="true"><input class="form-control" type="text" name="b_2741faf384c559d5568e7998e_1e4c20cbb2" tabindex="-1"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+<footer class="footer bg-light">        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-auto h-100 text-center text-lg-left">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item"><a style="color: #00599C;" href="https://anelen.co/about.html" target="_blank" rel="noopener">About</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a style="color: #00599C;" href="mailto:hello@anelen.co">Contact</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a style="color: #00599C;" href="https://www.iubenda.com/privacy-policy/8056022" target="_blank" rel="noopener">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 my-auto h-100 text-center text-lg-right">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/company/anelen/" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-2x fa-fw" style="color: #00599C;"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/anelendatascience/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-2x fa-fw" style="color: #00599C;"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/anelendata" target="_blank" rel="noopener"><i class="fa fa-twitter fa-2x fa-fw" style="color: #00599C;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<div class="container"><div class="copyright"><p>© 2017 - 2020 ANELEN Co., LLC</p></div></div></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script><script src="https://anelen.co/assets/js/script.min.js"></script></body></html>
