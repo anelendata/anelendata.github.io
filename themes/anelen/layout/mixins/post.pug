@@ -42,10 +42,9 @@ mixin postList()
 
 //- Post Page
 mixin post(page)
-    .post
-        article.post-block
-            h1.post-title
+    .intro
+        h1.text-center
                 != page.title
-            +postInfo(page)
-            .post-content
-                != page.content
+    // +postInfo(page)
+    .post-content
+        != page.content

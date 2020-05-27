@@ -1,8 +1,84 @@
 extends partial/layout.pug
 
 block container
-    include mixins/post.pug
-    +posts()
+    .article-list
+        section
+            .page-header
+                .col-lg-10.col-xl-8.offset-lg-1.offset-xl-2
+                    .text-left.intro
+                        h1.text-center Articles
+
+        .container
+            h2.text-center Our Approach
+            p.text-center Here are the selected articles that illustrate our practice.
+
+            .row.articles
+                .col-sm-6.col-md-4.item 
+                    a(href="/a-case-for-human-data-science/")
+                        img.img-fluid(src="https://anelen.co/assets/img/heraclitus.jpg")
+                    h3.name A Case for Human Data Science
+                    p.description
+                        strong "Machines are becoming smarter. But how can we make humans smarter?"
+                        This is our keynote that addresses why Anelen exists as a human-centric data science company while others focus on blind automation.
+                    br
+                    a(href="/a-case-for-human-data-science/")
+                        strong &gt;&gt; Learn more
+
+                .col-sm-6.col-md-4.item 
+                    a(href="https://docsend.com/view/cw4jqiv")
+                        img.img-fluid(src="https://anelen.co/assets/img/applications.png")
+                    h3.name Case Studies
+                    p.description
+                        We have accumulated case studies over the year. Find out how Anelen can help your organization.
+                    br
+                    a(href="https://docsend.com/view/cw4jqiv")
+                        strong &gt;&gt; Learn more
+
+                .col-sm-6.col-md-4.item 
+                    a(href="/data-democratization/")
+                        img.img-fluid(src="https://anelen.co/assets/img/superhero.jpg")
+                    h3.name How to overcome organizational inertia towards data democratization
+                    p.description
+                        Data democratization is the key for your organization to move faster and smarter. We can help with the infrastructure and the best practice.
+                    br
+                    a(href="/data-democratization/")
+                        strong &gt;&gt; Learn more
+
+            .row.articles
+                .col-sm-6.col-md-4.item 
+                    a(href="/kinoko-io-etl/")
+                        img.img-fluid(src="https://anelen.co/assets/img/kinoko-logo.png")
+                    h3.name ETL service by ANELEN, fully customizable & fully-managed
+                    p.description
+                        ETL: Extract the data from the source, Transform to your needs, and Load on the data warehouse.
+                    br
+                    a(href="/kinoko-io-etl/")
+                        strong &gt;&gt; Learn more
+
+                .col-sm-6.col-md-4.item 
+                    a(href="/data-sprint/")
+                        img.img-fluid(src="https://anelen.co/assets/img/data_wave.jpg")
+                    h3.name Data Sprint™: A winning analytics framework for light-speed organizations
+                    p.description
+                        Data Sprint is a framework that makes data science and analytics team deliver maximum business value.
+                    br
+                    a(href="/data-sprint/")
+                        strong &gt;&gt; Learn more
+
+                .col-sm-6.col-md-4.item 
+                    a(href="/product-analytics-101/")
+                        img.img-fluid(src="https://anelen.co/assets/img/leaking_bucket.png")
+                    h3.name Product analytics 101: Your app as a leaking funnel
+                    p.description
+                        Our deep background in product analytics dramatically improves the ROI of product development. This article introduces a basic concept of measuring the performance of online applications.
+                    br
+                    a(href="/product-analytics-101/")
+                        strong &gt;&gt; Learn more
+
+            h2.text-center Latest articles
+
+            include mixins/post.pug
+            +posts()
 
 block pagination
     include mixins/paginator.pug

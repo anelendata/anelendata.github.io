@@ -8,8 +8,12 @@ block description
     meta(name="description", content=desc)
 
 block container
-    include mixins/post.pug
-    +post(page)
+    .article-clean
+        .container
+            .row 
+            .col-lg-10.col-xl-8.offset-lg-1.offset-xl-2
+                include mixins/post.pug
+                +post(page)
 
 block pagination
     include mixins/paginator.pug

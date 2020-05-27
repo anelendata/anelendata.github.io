@@ -3,7 +3,9 @@ title: A Case for Human Data Science
 date: 2018-10-21 00:00:00
 tags:
 ---
-"Machines are becoming smarter. But how can we make humans smarter?"
+![Heraclitus](https://anelen.co/assets/img/heraclitus.jpg)
+
+**Machines are becoming smarter. But how can we make humans smarter?**
 
 This question was the primary driver for me to be a data scientist. From personal finance to corporate strategy, every day is filled with decisions. How many choices in life do we make rationally? Are we learning from past actions and consequences? How is the collective decision making of humankind improving over its history?
 
@@ -27,6 +29,6 @@ Humans are capable of realizing that no man ever steps in the same river twice. 
 
 Today, cutting-edge data processing tools must assist human activities for any decision-making bodies to thrive. A new discipline must be in place to let us make smarter decisions at a high pace. It is called data science. The new discipline owes much to the traditional studies such as statistics but operates at scale powered by computer science and engineering. It expands our decision-making capacity with machine learning, but still maintains the scientific rigor when the hypothesis is generated, the data is collected, and the bias was assessed. The practitioners of data science must have empathy for the human value system and ethics. They also master the art of conveying the message that effectively urges people to take action.
 
-**This is a case for human data science**, not a blind machine learning delegation. This is why I continue being a student of data science.
+*This is a case for human data science*, not a blind machine learning delegation. This is why I continue being a student of data science.
 
 Data scientists used to spend a long time cleansing data and tuning the hyper-parameters of machine learning models. Recently, more and more tools and platforms are becoming available to automate such tasks. Once we are free from those tasks, has the role of data scientists over? Far from it if you ask me as it continues the attempt to answer the core question — Machines are becoming smarter. But how can we make humans smarter? — while helping people make smarter decisions.

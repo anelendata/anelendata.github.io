@@ -3,12 +3,18 @@ html(lang=config.language)
     head
         include head.pug
     body
-        .wrap
-            header
-                h1.title=theme.title
+        nav.navbar.navbar-light.navbar-expand-md.navigation-clean-button
+            .container
+                a.navbar-brand(href='https://anelen.co', target="_self")=theme.title
                 include nav.pug
-            main.container
-                block container
-            footer
-                block pagination
+        block container
+        block pagination
+        include services.pug
+        include newsletter.html
+        footer.footer.bg-light
+            include footer.html
+            .container
                 block copyright
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js")
+
