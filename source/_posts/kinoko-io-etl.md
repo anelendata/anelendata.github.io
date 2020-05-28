@@ -61,4 +61,4 @@ And did you know that fungi have been called 'Earth's natural internet'? Accordi
 mushrooms are "made up of a mass of thin threads, known as a mycelium. We now know that these threads act as a kind of underground internet, linking the roots of different plants. That tree in your garden is probably hooked up to a bush several meters away, thanks to mycelia." and "By linking to the fungal network they can help out their neighbors by sharing nutrients and information"! So, kinoko is exactly what ANELEN's ETL service does.
 
 I am also amazed at how mushrooms grow so big so quickly after the rain. Your data looms so big before you notice. So act quickly! Start today by checking
-[ANELEN's case studies](https://bit.ly/anelen-data-science).
+[ANELEN's case studies](https://anelen.co/case-presentation.html)
