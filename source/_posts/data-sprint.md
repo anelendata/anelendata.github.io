@@ -50,4 +50,4 @@ The productivity of analytics and data science is determined by the value of inf
 
 *Daigo Tanaka, Ph.D. is the founder of Anelen Co., LLC, whose mission is to help innovative businesses make smarter decisions with data science. He introduced an agile start-up methodology to a pre-Stage A startup and helped to raise the total of $105MM. If you need a consultation on the topic of a startup operation and data science,
 please contact hello@anelen.co (.co, not .com don't get your email lost elsewhere!) or schedule a free discovery meeting with the
-[scheduler](https://calendly.com/anelen-discovery)*
+[scheduler](https://calendly.com/anelen-discovery).*
