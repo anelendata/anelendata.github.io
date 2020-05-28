@@ -31,7 +31,7 @@ Suppose the alert comes in as a notification on my phone if I had installed the 
 
 Did you notice that on the first screen from the left, it says, "Our advice Buy" with an icon to indicate that the price will go up? Let's pretend that you are the PM and wants to test if such advice will drive the most important business goal: the sales.
 
-In fact, you even ran an [A/B test](https://www.linkedin.com/pulse/tale-two-universes-experiments-business-daigo-tanaka-ph-d-?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3B4vagn7KyR%2FC9rekEA7eOWA%3D%3D) to see if "Our advice Buy" increases the number of sales closed, which is your product goal. The test came in positive, but the increase in sales was not as much as you had expected. What is going on?
+In fact, you even ran an [A/B test](https://articles.anelen.co/online-experiments/) to see if "Our advice Buy" increases the number of sales closed, which is your product goal. The test came in positive, but the increase in sales was not as much as you had expected. What is going on?
 
 Assuming there are more users persuaded to buy the ticket by the recommendation than the actual sales, you imagine several scenarios happening among users who entered the booking process in the app.
 
