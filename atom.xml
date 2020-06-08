@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ANELEN articles</title>
+  
+  <subtitle>Sharing our insights and best practices</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://articles.anelen.co/"/>
+  <updated>2020-06-08T21:51:59.521Z</updated>
+  <id>http://articles.anelen.co/</id>
+  
+  <author>
+    <name>ANELEN Co., LLC</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A web-crawler-driven ETL that collects data from anywhere</title>
+    <link href="http://articles.anelen.co/kinoko_webcrawler/"/>
+    <id>http://articles.anelen.co/kinoko_webcrawler/</id>
+    <published>2020-05-12T07:00:00.000Z</published>
+    <updated>2020-06-08T21:51:59.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Extracting and organizing the data is the first step before any analysis can begin. Ironically,
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Introducing kinoko.io: A fully-managed &amp; custom ETL service by ANELEN</title>
+    <link href="http://articles.anelen.co/kinoko-io-etl/"/>
+    <id>http://articles.anelen.co/kinoko-io-etl/</id>
+    <published>2020-01-27T08:00:00.000Z</published>
+    <updated>2020-06-08T21:51:59.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://anelen.co/assets/img/kinoko-logo.png?h=705abc48bc157229f1103c4aac54fa4d&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>A Case for Human Data Science</title>
+    <link href="http://articles.anelen.co/a-case-for-human-data-science/"/>
+    <id>http://articles.anelen.co/a-case-for-human-data-science/</id>
+    <published>2018-10-21T07:00:00.000Z</published>
+    <updated>2020-06-08T21:51:59.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://anelen.co/assets/img/heraclitus.jpg&quot; alt=&quot;Heraclitus&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Machines
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Data Sprint™: A winning analytics framework for light-speed organizations</title>
+    <link href="http://articles.anelen.co/data-sprint/"/>
+    <id>http://articles.anelen.co/data-sprint/</id>
+    <published>2018-09-27T18:19:09.000Z</published>
+    <updated>2020-06-08T21:51:59.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://anelen.co/assets/img/data_wave.jpg&quot; alt=&quot;header image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In this
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Product analytics 101: Your app as a leaking funnel</title>
+    <link href="http://articles.anelen.co/product-analytics-101/"/>
+    <id>http://articles.anelen.co/product-analytics-101/</id>
+    <published>2017-07-11T07:00:00.000Z</published>
+    <updated>2020-06-08T21:51:59.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://anelen.co/assets/img/leaking_bucket.png&quot; alt=&quot;leaking bucket&quot;&gt;&lt;/p&gt;
+&lt;p&gt;As a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Tale of Two Universes: Experiments for Business</title>
+    <link href="http://articles.anelen.co/online-experiments/"/>
+    <id>http://articles.anelen.co/online-experiments/</id>
+    <published>2017-06-27T07:00:00.000Z</published>
+    <updated>2020-06-08T21:51:59.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>How to overcome organizational inertia towards data democratization</title>
+    <link href="http://articles.anelen.co/data-democratization/"/>
+    <id>http://articles.anelen.co/data-democratization/</id>
+    <published>2017-06-20T07:00:00.000Z</published>
+    <updated>2020-06-08T21:51:59.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://anelen.co/assets/img/superhero.jpg&quot; alt=&quot;super-hero&quot;&gt;&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
