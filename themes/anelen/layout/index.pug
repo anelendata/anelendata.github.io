@@ -76,10 +76,15 @@ block container
                         strong &gt;&gt; Learn more
 
             .row.articles
-                .col
+                .col-md-8
                     h2.text-center Latest articles
                     include mixins/post.pug
                     +posts()
+                .col
+                    h2.text-center Follow &nbsp;
+                        a(href="https://twitter.com/AnelenData") &#64;AnelenData
+                        span on Twitter
+                    <a class="twitter-timeline" data-width="360" data-height="1200" href="https://twitter.com/AnelenData?ref_src=twsrc%5Etfw">Tweets by AnelenData</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 block pagination
