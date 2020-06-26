@@ -115,7 +115,7 @@ target_gcs receives the data through pipe (`|`) and writes out to GCS.
 
 After the data is loaded to Cloud Storage, it's time to create a table on BigQuery.
 For this, we can create an [externally partitioned table](https://cloud.google.com/bigquery/docs/hive-partitioned-loads-gcs)
-with the [Python script](https://github.com/anelendata/target_gcs/blob/master/create_schemaless_table.py) I provided:
+with the [Python script](https://github.com/anelendata/target_gcs/blob/master/create_schemaless_table.py) I provided (*):
 
 ```
 python create_schemaless_table.py \
@@ -127,6 +127,11 @@ python create_schemaless_table.py \
 
 In my case, I set the target dataset name to `gcs_partitioned`
 and table name to `usgs_events_unparsed`.
+
+(*) Note: If the JSON schema in the data is stable and consistent, it makes more sense to load in
+[the standard way of loading JSON data](https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json).
+In the method in this article is advantageous when you have JSON record whose set of keys are inconsistent among records.
+I also had a case where I needed to first search for all the keys present in the data, then flatten/unwrap/unpivot the data into a long format.
 
 ## Unstructured data on BigQuery
 
