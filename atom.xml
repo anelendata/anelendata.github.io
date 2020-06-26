@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://articles.anelen.co/"/>
-  <updated>2020-06-08T21:51:59.521Z</updated>
+  <updated>2020-06-26T07:55:25.680Z</updated>
   <id>http://articles.anelen.co/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Go schemaless: ELT with Google Cloud Storage and BigQuery</title>
+    <link href="http://articles.anelen.co/elt-google-cloud-storage-bigquery/"/>
+    <id>http://articles.anelen.co/elt-google-cloud-storage-bigquery/</id>
+    <published>2020-06-25T20:12:36.000Z</published>
+    <updated>2020-06-26T07:55:25.680Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/earthquakes.png&quot; alt=&quot;USGS earthquake events map&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The image above,
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>A web-crawler-driven ETL that collects data from anywhere</title>
     <link href="http://articles.anelen.co/kinoko_webcrawler/"/>
     <id>http://articles.anelen.co/kinoko_webcrawler/</id>
     <published>2020-05-12T07:00:00.000Z</published>
-    <updated>2020-06-08T21:51:59.521Z</updated>
+    <updated>2020-06-26T07:55:25.680Z</updated>
     
     <summary type="html">
     
@@ -44,7 +68,7 @@
     <link href="http://articles.anelen.co/kinoko-io-etl/"/>
     <id>http://articles.anelen.co/kinoko-io-etl/</id>
     <published>2020-01-27T08:00:00.000Z</published>
-    <updated>2020-06-08T21:51:59.521Z</updated>
+    <updated>2020-06-26T07:55:25.680Z</updated>
     
     <summary type="html">
     
@@ -67,7 +91,7 @@
     <link href="http://articles.anelen.co/a-case-for-human-data-science/"/>
     <id>http://articles.anelen.co/a-case-for-human-data-science/</id>
     <published>2018-10-21T07:00:00.000Z</published>
-    <updated>2020-06-08T21:51:59.521Z</updated>
+    <updated>2020-06-26T07:55:25.676Z</updated>
     
     <summary type="html">
     
@@ -91,7 +115,7 @@
     <link href="http://articles.anelen.co/data-sprint/"/>
     <id>http://articles.anelen.co/data-sprint/</id>
     <published>2018-09-27T18:19:09.000Z</published>
-    <updated>2020-06-08T21:51:59.521Z</updated>
+    <updated>2020-06-26T07:55:25.676Z</updated>
     
     <summary type="html">
     
@@ -115,7 +139,7 @@
     <link href="http://articles.anelen.co/product-analytics-101/"/>
     <id>http://articles.anelen.co/product-analytics-101/</id>
     <published>2017-07-11T07:00:00.000Z</published>
-    <updated>2020-06-08T21:51:59.521Z</updated>
+    <updated>2020-06-26T07:55:25.680Z</updated>
     
     <summary type="html">
     
@@ -139,7 +163,7 @@
     <link href="http://articles.anelen.co/online-experiments/"/>
     <id>http://articles.anelen.co/online-experiments/</id>
     <published>2017-06-27T07:00:00.000Z</published>
-    <updated>2020-06-08T21:51:59.521Z</updated>
+    <updated>2020-06-26T07:55:25.680Z</updated>
     
     <summary type="html">
     
@@ -162,7 +186,7 @@
     <link href="http://articles.anelen.co/data-democratization/"/>
     <id>http://articles.anelen.co/data-democratization/</id>
     <published>2017-06-20T07:00:00.000Z</published>
-    <updated>2020-06-08T21:51:59.521Z</updated>
+    <updated>2020-06-26T07:55:25.676Z</updated>
     
     <summary type="html">
     
