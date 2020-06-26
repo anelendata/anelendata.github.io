@@ -41,7 +41,7 @@
 <meta property="og:image" content="http://articles.anelen.co/images/usgs_parsed_events_sample.png">
 <meta property="og:image" content="http://articles.anelen.co/images/usgs_events_map.png">
 <meta property="article:published_time" content="2020-06-25T20:12:36.000Z">
-<meta property="article:modified_time" content="2020-06-26T15:52:07.031Z">
+<meta property="article:modified_time" content="2020-06-26T20:25:25.743Z">
 <meta property="article:author" content="ANELEN Co., LLC">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
@@ -105,11 +105,15 @@ and the data is written out to stdout.
 target_gcs receives the data through pipe (<code>|</code>) and writes out to GCS.</p>
 <h2 id="GCS-to-BigQuery"><a href="#GCS-to-BigQuery" class="headerlink" title="GCS to BigQuery"></a>GCS to BigQuery</h2><p>After the data is loaded to Cloud Storage, it’s time to create a table on BigQuery.
 For this, we can create an <a href="https://cloud.google.com/bigquery/docs/hive-partitioned-loads-gcs" target="_blank" rel="noopener">externally partitioned table</a>
-with the <a href="https://github.com/anelendata/target_gcs/blob/master/create_schemaless_table.py" target="_blank" rel="noopener">Python script</a> I provided:</p>
+with the <a href="https://github.com/anelendata/target_gcs/blob/master/create_schemaless_table.py" target="_blank" rel="noopener">Python script</a> I provided (*):</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python create_schemaless_table.py \</span><br><span class="line">  -p your-project-id \</span><br><span class="line">  -g gs:&#x2F;&#x2F;your-bucket&#x2F;your-dataset \</span><br><span class="line">  -d your-dataset-name \</span><br><span class="line">  -t your-table-name</span><br></pre></td></tr></table></figure>
 
 <p>In my case, I set the target dataset name to <code>gcs_partitioned</code>
 and table name to <code>usgs_events_unparsed</code>.</p>
+<p>(*) Note: If the JSON schema in the data is stable and consistent, it makes more sense to load in
+<a href="https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json" target="_blank" rel="noopener">the standard way of loading JSON data</a>.
+In the method in this article is advantageous when you have JSON record whose set of keys are inconsistent among records.
+I also had a case where I needed to first search for all the keys present in the data, then flatten/unwrap/unpivot the data into a long format.</p>
 <h2 id="Unstructured-data-on-BigQuery"><a href="#Unstructured-data-on-BigQuery" class="headerlink" title="Unstructured data on BigQuery"></a>Unstructured data on BigQuery</h2><p>Let’s query the unstructured data.</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM &#96;gcs_partitioned.usgs_events_unparsed&#96;</span><br><span class="line">WHERE date BETWEEN DATE &#39;2020-06-24&#39; AND DATE &#39;2020-06-25&#39; LIMIT 10</span><br></pre></td></tr></table></figure>
 
