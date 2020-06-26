@@ -10,7 +10,7 @@ is a map showing the location and magnitude (bubble size) of earthquakes on June
 
 ## Load first. Worry about schema later.
 
-When we load the data to a data warehouse, we usually 
+When we load the data to a data warehouse, we usually
 [specify the schema](https://cloud.google.com/bigquery/docs/schemas)
 upfront.
 What if we can first load the data without worrying about the schema,
@@ -26,7 +26,7 @@ The advantages of doing ELT (Extract, Load, and Transform) instead of include:
 1. The extraction process won't have to change when the schema changes.
 2. The transformation process can take advantage of the massively-parallel execution by the modern data warehouse.
 
-In the rest of this post, I would like to demonstrate the business impact, especially with speed, when we adopt ELT approach.
+In this post, I would like to demonstrate the business impact, especially with speed, when we adopt ELT approach.
 
 ## ELT with BigQuery and Cloud Storage
 In Google Cloud Platform, it is very easy to do ELT with
@@ -35,7 +35,7 @@ and [BigQuery](https://cloud.google.com/bigquery). Using GCS and BigQuery, Felip
 (His articles can be found [here](https://cloud.google.com/blog/products/gcp/bigquery-lazy-data-loading-sql-data-languages-ddl-and-dml-partitions-and-half-a-trillion-wikipedia-pageviews) and [here](https://medium.com/google-cloud/bigquery-lazy-data-loading-ddl-dml-partitions-and-half-a-trillion-wikipedia-pageviews-cd3eacd657b6))
 
 In his post, Hoffa loaded the super large set of files with a simple format (space-separated) parsing with `REGEXP_EXTRACT` function.
-I will use 
+I will use
 [the USGS Earthquake event data](https://earthquake.usgs.gov/fdsnws/event/1/) as an example dataset. The earthquake event data is a newline-separated JSON file that looks like this:
 
 ```
