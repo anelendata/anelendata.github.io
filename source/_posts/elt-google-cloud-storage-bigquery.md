@@ -226,6 +226,11 @@ I just demonstrated a case of efficiency gain with ELT.
 However, ETL or ETLT can be more appropriate in other scenarios.
 For example, masking or obfuscating personal identifiable data is very important before storing them in a data lake including Cloud Storage because it is much more costly to delete or modify a single record in a file partition after it's loaded. (Think of a GDPR case a user requests a complete data erase.)
 
+## Extra: Animate the earthquake events on the map
+
+![earthquakes](/images/earthquakes_20200624.gif)
+
+Above visualization was created with this [source code](https://colab.research.google.com/drive/1Ajf3VzqPxJpu9Vrq5EZTDRGRxP6HjXC0?usp=sharing)
 
 I hope this introduction was informative and relatable to your business. If you would like to find out more what Anelen can do for your data challenge, please contact hello@anelen.co (.co, not .com don’t get your email lost elsewhere!) or schedule a free discovery meeting with the [scheduler](https://calendly.com/anelen-discovery).
 
