@@ -47,3 +47,13 @@
 .right {
   text-align: right;
 }
+
+.nav-info {
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: 0px;
+  right: 0px;
+  text-align: right;
+}
+

@@ -1,5 +1,7 @@
 ![](kinoko/image/01.svg)
 
+<div class="nav-info">Navigation<br/>&#x2937;</div>
+
 --------
 
 ![](kinoko/image/02.svg)
