@@ -1,49 +1,61 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>reveal.js</title>
+  <link rel="stylesheet" href="/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="/revealjs/dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="/slides/style.css">
 
-		<title>reveal.js</title>
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="/revealjs/plugin/highlight/monokai.css" id="highlight-theme">
 
-		<link rel="stylesheet" href="/revealjs/dist/reset.css">
-		<link rel="stylesheet" href="/revealjs/dist/reveal.css">
-		<link rel="stylesheet" href="/revealjs/dist/theme/black.css" id="theme">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides" id="target">
+        <section
+                 data-markdown="/slides/hello.md"
+                 data-separator="^--------"
+                 data-separator-org="^\n\n\n"
+                 data-separator-vertical="^----"
+                 data-separator-vertical-org="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf-8">
+        </section>
+      </div>
+    </div>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="/revealjs/plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-              <section id="target"
-                       data-markdown="/slides/hello.md"
-                       data-separator="^\n\n\n"
-                       data-separator-vertical="^\n\n"
-                       data-separator-notes="^Note:"
-                       data-charset="iso-8859-15">
-              </section>
-			</div>
-		</div>
-
-		<script src="/revealjs/dist/reveal.js"></script>
-		<script src="/revealjs/plugin/notes/notes.js"></script>
-		<script src="/revealjs/plugin/markdown/markdown.js"></script>
-		<script src="/revealjs/plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
+    <script src="/revealjs/dist/reveal.js"></script>
+    <script src="/revealjs/plugin/notes/notes.js"></script>
+    <script src="/revealjs/plugin/markdown/markdown.js"></script>
+    <script src="/revealjs/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             const slide = urlParams.get('s') || 'default';
-            document.getElementById('target').setAttribute('data-markdown', '/slides/' + slide + '.md');
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+//            const slide = urlParams.get('s') || 'hello';
+            document.getElementById('target').firstElementChild.setAttribute('data-markdown', '/slides/' + slide + '/slide.md');
+      Reveal.initialize({
+        hash: true,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+        markdown: {
+          smartypants: true
+        }
+      });
+    </script>
+    <script type="module">
+      import('/slides/' + slide + '/script.js').then(module => {
+          module.vega();});
+    </script>
+  </body>
 </html>
