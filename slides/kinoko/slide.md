@@ -25,3 +25,8 @@
 --------
 
 ![](kinoko/image/05.svg)
+
+
+--------
+
+![](kinoko/image/01.svg)
