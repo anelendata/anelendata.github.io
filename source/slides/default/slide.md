@@ -9,8 +9,7 @@
 - Go right to stay at the high-level story.
 - Go down to dig deeper to the technical details.
 
-<div style="text-align: right;">Navigation</div>
-<div style="text-align: right;">&#x2937;</div>
+<div class="nav-info">Navigation<br/>&#x2937;</div>
 
 --------
 
