@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>reveal.js</title>
+  <title>Presentations by ANELEN</title>
   <link rel="stylesheet" href="/revealjs/dist/reset.css">
   <link rel="stylesheet" href="/revealjs/dist/reveal.css">
   <link rel="stylesheet" href="/revealjs/dist/theme/white.css" id="theme">
@@ -42,7 +42,6 @@
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             const slide = urlParams.get('s') || 'default';
-//            const slide = urlParams.get('s') || 'hello';
             document.getElementById('target').firstElementChild.setAttribute('data-markdown', '/slides/' + slide + '/slide.md');
       Reveal.initialize({
         hash: true,
