@@ -7,13 +7,15 @@ nav.navbar.navbar-light.navbar-expand-md.navigation-clean-button
         .collapse.navbar-collapse(id="navcol-1")
             ul.nav.navbar-nav.mr-auto
                 - var current_url = _.isUndefined(page.current_url) ? page.path.match(/(.+)\//)[0] : page.current_url
+                - var re = /^(http|https):\/\/*/gi;
+                - var tar = re.test(value) ? "_self" : "_self"
                 li.nav-item(dropdown)
                     a.dropdown-toggle.nav-link(data-toggle="dropdown", aria-expanded="false" href="#")
-                      Services
-                        div.dropdown-menu(role="menu")
-                          each value, key in theme.services
-                            a.dropdown-item(role="presentation", href=url_for(value) target=tar)
-                              != __(key)
+                      span Services
+                    div.dropdown-menu(role="menu", style="left:auto")
+                      each value, key in theme.services
+                        a.dropdown-item(role="presentation", href=url_for(value) target=tar)
+                          != __(key)
                 each value, key in theme.menu
                     li.nav-item(role="presentation")
                         - var re = /^(http|https):\/\/*/gi;
