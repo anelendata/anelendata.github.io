@@ -1,4 +1,11 @@
-# Company
+
+<p>
+<img src="https://anelen.co/assets/img/logo.png"/>
+</p>
+
+<div class="right-bottom">
+<button onclick="Reveal.toggleOverview();">Overview</button>
+</div>
 
 ----
 
@@ -32,12 +39,9 @@
 
 ----
 
-<a href="#" onclick="Reveal.toggleOverview();">
-<img src="https://anelen.co/assets/img/logo.png"/>
-</a>
-----
-
-![orchestration](/slides/etl/images/orchestration.png)
+<p><a href="#" onclick="Reveal.toggleOverview();">
+<img src="/slides/etl/images/orchestration.png"/>
+</a></p>
 
 ----
 
