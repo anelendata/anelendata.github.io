@@ -1,0 +1,97 @@
+# Company
+
+----
+
+![mission](/slides/etl/images/anelen-mission.png)
+
+----
+
+![intelligence](/slides/etl/images/intelligence.png)
+
+----
+
+![infrastructure](/slides/etl/images/infrastructure.png)
+
+--------
+
+# ETL service
+
+----
+![etl](https://anelen.co/assets/img/anelen-etl-anim.svg)
+----
+
+![etl-niche](/slides/etl/images/etl-niche.png)
+
+--------
+
+# Technology
+
+----
+
+![singer.io](/slides/etl/images/singer-io.png)
+
+----
+
+![anelen](https://anelen.co/assets/img/logo.png)
+
+----
+
+![orchestration](/slides/etl/images/orchestration.png)
+
+----
+
+![handoff](/slides/etl/images/handoff.png)
+
+----
+
+![cli first](/slides/etl/images/cli.png)
+
+----
+
+![cli first success](/slides/etl/images/dbt.png)
+
+----
+
+![cli first success](/slides/etl/images/serverless.png)
+
+--------
+
+# Open Innovation Model
+
+----
+
+![open innovation](/slides/etl/images/open-innovation.png)
+
+----
+
+![open collaboration](/slides/etl/images/slack.png)
+
+----
+
+![testimonial](/slides/etl/images/testimonial.png)
+
+--------
+
+# What's next
+
+----
+
+![timeline](/slides/etl/images/timeline.png)
+
+----
+
+![next level](/slides/etl/images/next-level.png)
+
+----
+
+![sales](/slides/etl/images/pricing.png)
+
+----
+
+![jira](/slides/etl/images/jira.png)
+
+----
+
+![innovation](/slides/etl/images/innovation.png)
+
+
