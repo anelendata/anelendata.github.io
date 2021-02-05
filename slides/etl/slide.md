@@ -32,8 +32,9 @@
 
 ----
 
-![anelen](https://anelen.co/assets/img/logo.png)
-
+<a href="#" onclick="Reveal.toggleOverview();">
+<img src="https://anelen.co/assets/img/logo.png"/>
+</a>
 ----
 
 ![orchestration](/slides/etl/images/orchestration.png)
