@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://articles.anelen.co/"/>
-  <updated>2021-02-05T07:20:18.948Z</updated>
+  <updated>2021-02-13T06:41:40.605Z</updated>
   <id>http://articles.anelen.co/</id>
   
   <author>
@@ -17,11 +17,74 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>What is P in ELTP Process?</title>
+    <link href="http://articles.anelen.co/What-is-P-in-ELTP-Process/"/>
+    <id>http://articles.anelen.co/What-is-P-in-ELTP-Process/</id>
+    <published>2021-02-13T01:53:30.000Z</published>
+    <updated>2021-02-13T06:41:40.605Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/iStock-1150767851.jpg&quot; alt=&quot;data, where you need&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Solve the “data
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="ELT" scheme="http://articles.anelen.co/tags/ELT/"/>
+    
+      <category term="ETL" scheme="http://articles.anelen.co/tags/ETL/"/>
+    
+      <category term="ELTP" scheme="http://articles.anelen.co/tags/ELTP/"/>
+    
+      <category term="data engineering" scheme="http://articles.anelen.co/tags/data-engineering/"/>
+    
+      <category term="analytics" scheme="http://articles.anelen.co/tags/analytics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ANELEN is 4 years old and embracing Open Innovation</title>
+    <link href="http://articles.anelen.co/Anelen-is-4-years-old-and-embracing-Open-Innovation/"/>
+    <id>http://articles.anelen.co/Anelen-is-4-years-old-and-embracing-Open-Innovation/</id>
+    <published>2021-02-06T06:03:51.000Z</published>
+    <updated>2021-02-13T06:41:40.605Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Open Source" scheme="http://articles.anelen.co/tags/Open-Source/"/>
+    
+      <category term="Open Innovation" scheme="http://articles.anelen.co/tags/Open-Innovation/"/>
+    
+      <category term="Celebration" scheme="http://articles.anelen.co/tags/Celebration/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Go schemaless: ELT with Google Cloud Storage and BigQuery</title>
     <link href="http://articles.anelen.co/elt-google-cloud-storage-bigquery/"/>
     <id>http://articles.anelen.co/elt-google-cloud-storage-bigquery/</id>
     <published>2020-06-25T20:12:36.000Z</published>
-    <updated>2021-02-05T07:20:18.948Z</updated>
+    <updated>2021-02-13T06:41:40.605Z</updated>
     
     <summary type="html">
     
@@ -45,7 +108,7 @@
     <link href="http://articles.anelen.co/kinoko_webcrawler/"/>
     <id>http://articles.anelen.co/kinoko_webcrawler/</id>
     <published>2020-05-12T07:00:00.000Z</published>
-    <updated>2021-02-05T07:20:18.948Z</updated>
+    <updated>2021-02-13T06:41:40.605Z</updated>
     
     <summary type="html">
     
@@ -68,7 +131,7 @@
     <link href="http://articles.anelen.co/kinoko-io-etl/"/>
     <id>http://articles.anelen.co/kinoko-io-etl/</id>
     <published>2020-01-27T08:00:00.000Z</published>
-    <updated>2021-02-05T07:20:18.948Z</updated>
+    <updated>2021-02-13T06:41:40.605Z</updated>
     
     <summary type="html">
     
@@ -91,7 +154,7 @@
     <link href="http://articles.anelen.co/a-case-for-human-data-science/"/>
     <id>http://articles.anelen.co/a-case-for-human-data-science/</id>
     <published>2018-10-21T07:00:00.000Z</published>
-    <updated>2021-02-05T07:20:18.948Z</updated>
+    <updated>2021-02-13T06:41:40.605Z</updated>
     
     <summary type="html">
     
@@ -115,7 +178,7 @@
     <link href="http://articles.anelen.co/data-sprint/"/>
     <id>http://articles.anelen.co/data-sprint/</id>
     <published>2018-09-27T18:19:09.000Z</published>
-    <updated>2021-02-05T07:20:18.948Z</updated>
+    <updated>2021-02-13T06:41:40.605Z</updated>
     
     <summary type="html">
     
@@ -139,7 +202,7 @@
     <link href="http://articles.anelen.co/product-analytics-101/"/>
     <id>http://articles.anelen.co/product-analytics-101/</id>
     <published>2017-07-11T07:00:00.000Z</published>
-    <updated>2021-02-05T07:20:18.948Z</updated>
+    <updated>2021-02-13T06:41:40.605Z</updated>
     
     <summary type="html">
     
@@ -163,7 +226,7 @@
     <link href="http://articles.anelen.co/online-experiments/"/>
     <id>http://articles.anelen.co/online-experiments/</id>
     <published>2017-06-27T07:00:00.000Z</published>
-    <updated>2021-02-05T07:20:18.948Z</updated>
+    <updated>2021-02-13T06:41:40.605Z</updated>
     
     <summary type="html">
     
@@ -186,7 +249,7 @@
     <link href="http://articles.anelen.co/data-democratization/"/>
     <id>http://articles.anelen.co/data-democratization/</id>
     <published>2017-06-20T07:00:00.000Z</published>
-    <updated>2021-02-05T07:20:18.948Z</updated>
+    <updated>2021-02-13T06:41:40.605Z</updated>
     
     <summary type="html">
     
