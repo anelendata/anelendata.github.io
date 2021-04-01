@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> handoff: Connecting Cloud Data at Scale without Managing a Cluster · ANELEN articles</title><meta name="description" content="handoff: Connecting Cloud Data at Scale without Managing a Cluster - ANELEN Co., LLC"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" sizes="180x180" href="https://anelen.co/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" sizes="192x192" href="https://anelen.co/assets/img/favicons/android-icon-192x192.png"><link rel="icon" sizes="32x32" ref="https://anelen.co/assets/img/favicons/favicon-32x32.png"><link rel="stylesheet" href="https://anelen.co/assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://anelen.co/assets/css/styles.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="https://anelen.co/assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://anelen.co/assets/fonts/fontawesome5-overrides.min.css">
+<link rel="stylesheet" href="https://anelen.co/assets/css/styles.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://anelen.co.jp/assets/img/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://anelen.co.jp/assets/img/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://anelen.co.jp/assets/img/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://anelen.co.jp/assets/img/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://anelen.co.jp/assets/img/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://anelen.co.jp/assets/img/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://anelen.co.jp/assets/img/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://anelen.co.jp/assets/img/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://anelen.co.jp/assets/img/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://anelen.co.jp/assets/img/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://anelen.co.jp/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://anelen.co.jp/assets/img/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://anelen.co.jp/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="https://anelen.co.jp/assets/img/favicons/manifest.json">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93160325-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    </script>
+<!-- End Global site tag (gtag.js) - Google Analytics -->
+<meta name="description" content="This article describes a way to develop and deploy many data pipelines tasks without managing a cluster. Business contextYou can skip this section if you are only interested in the technical part. Or">
+<meta property="og:type" content="article">
+<meta property="og:title" content="handoff: Connecting Cloud Data at Scale without Managing a Cluster">
+<meta property="og:url" content="http://articles.anelen.co/Scaling-ETL-without-Managing-a-Cluster/index.html">
+<meta property="og:site_name" content="ANELEN articles">
+<meta property="og:description" content="This article describes a way to develop and deploy many data pipelines tasks without managing a cluster. Business contextYou can skip this section if you are only interested in the technical part. Or">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://articles.anelen.co/images/keep-flowing-handoff.gif">
+<meta property="og:image" content="http://articles.anelen.co/images/long-tail.png">
+<meta property="og:image" content="http://articles.anelen.co/images/this_is_handoff.png">
+<meta property="og:image" content="http://articles.anelen.co/images/handoff-ui.gif">
+<meta property="article:published_time" content="2021-03-20T20:47:40.000Z">
+<meta property="article:modified_time" content="2021-04-01T04:45:59.963Z">
+<meta property="article:author" content="ANELEN Co., LLC">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://articles.anelen.co/images/keep-flowing-handoff.gif"><link rel="search" type="application/opensearchdescription+xml" href="http://articles.anelen.co/atom.xml" title="ANELEN articles"><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="ANELEN articles" type="application/atom+xml">
+</head><body><div class="modal fade" role="dialog" tabindex="-1" id="cookieconsent">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><strong>We are care about privacy and rights</strong></h4>
+        <button type="button" class="close hidden" data-dismiss="modal" aria-label="Close" id="acceptcookie1" style="visibility: hidden;"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <p>So we want to let you know that we use cookies to track web visit data like many other commercial websites. We use them for a historical research to improve the visitor and customer experience. If you continue using our website, we'll assume that you agree to receive all cookies on this website.&nbsp;<a href="https://www.iubenda.com/privacy-policy/8056022" target="_blank" rel="noopener">Learn&nbsp;more</a></p>
+      </div>
+      <div class="modal-footer" style="background-image: url('https://anelen.co/assets/img/logo.png');background-size: contain;background-repeat: no-repeat;background-position: 10% 10%;margin: 15px;border-top: 0px;">
+        <button class="btn btn-primary" id="acceptcookie2" data-dismiss="modal" type="button">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-button"><div class="container"><a class="navbar-brand" href="https://anelen.co" target="_self">ANELEN articles</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navcol-1"><ul class="nav navbar-nav mr-auto"><li class="nav-item" dropdown><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span>Services</span></a><div class="dropdown-menu" role="menu" style="left:auto"><a class="dropdown-item" role="presentation" href="https://anelen.co/data-engineering.html" target="_self">Data Engineering</a><a class="dropdown-item" role="presentation" href="https://anelen.co/analytics.html" target="_self">Analytics</a><a class="dropdown-item" role="presentation" href="https://anelen.co/stats_ml.html" target="_self">Statistics and Machine Learning</a></div></li><li class="nav-item" role="presentation"><!-- - var tar = re.test(value) ? "_blank" : "_self"--><a class="nav-link" href="https://anelen.co/custom-etl.html" target="_self">Custom ETL</a></li><li class="nav-item" role="presentation"><!-- - var tar = re.test(value) ? "_blank" : "_self"--><a class="nav-link" href="https://anelen.co/about.html" target="_self">Our Story</a></li><li class="nav-item" role="presentation"><!-- - var tar = re.test(value) ? "_blank" : "_self"--><a class="nav-link" href="https://anelen.co/open-source.html" target="_self">Open Source</a></li><li class="nav-item" role="presentation"><!-- - var tar = re.test(value) ? "_blank" : "_self"--><a class="nav-link" href="/index.html" target="_self">Articles</a></li><li class="nav-item" role="presentation"><!-- - var tar = re.test(value) ? "_blank" : "_self"--><a class="nav-link" href="https://anelen.co/clients.html" target="_self">Clients Only</a></li></ul></div></div></nav><div class="article-clean"><div class="container"><div class="row"> </div><div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2"><div class="intro"><h1 class="text-center">handoff: Connecting Cloud Data at Scale without Managing a Cluster</h1></div><!-- +postInfo(page)--><div class="post-content"><p><img src="/images/keep-flowing-handoff.gif" alt="data flow"></p>
+<p>This article describes a way to develop and deploy many data pipelines tasks without managing a cluster.</p>
+<h2 id="Business-context"><a href="#Business-context" class="headerlink" title="Business context"></a>Business context</h2><p>You can skip this section if you are only interested in the technical part. Or you can read this section only to grasp the business implication of this technical article. Before diving into the tech of it, I wanted to provide a brief business context so you understand why we implement it in a certain way.</p>
+<p>We are a technology-leveraged service company. One of the services is custom ETL/ELT for many clients. ETL stands for Extracting, Transforming, and Loading of data. Recently, ELT workflow is becoming popular; the data is extracted and loaded on the data warehouse (DWH) first before the transformation is executed by the massively parallel modern DWH engine.</p>
+<p>More and more companies, even when their core value is not in tech, started to leverage the cloud applications and their data in order to make their operation lean and effective. For example, D2C (direct to consumer) companies produce niche house-hold products and ship directly to their customers instead of relying on a traditional retail distribution channel. In doing so, The D2C uses the marketing automation platform like Marketo or Pardot, runs ads on Facebook and Google platform, and manage the supply chain with Flexport: All of them produce data about their customers. ETL process extracts data from each cloud services and load on one DWH. By combining the data and analyzing them as a whole, the quality of the customer experience is continuously improved.</p>
+<p>More than ever, the need for establishing data pipelines to do ETL is growing. There are companies that provide data connectors for major cloud applications like Salesforce. But the development of the data connectors is much slower than the growth of the cloud applications in the Software as a Service (SaaS) market.  Meanwhile, not every company is interested in developing an internal data engineering team.</p>
+<p><img src="/images/long-tail.png" alt="long tail: no cloud apps left behind"></p>
+<p>That is why <a href="https://handoff.cloud" target="_blank" rel="noopener">fully-managed ETL services</a> like ours are becoming the new option: With a fraction of the cost of hiring a data engineer, the non-tech companies get the tailor-made data pipeline service.</p>
+<h2 id="Technical-challenges-and-Initial-Solution"><a href="#Technical-challenges-and-Initial-Solution" class="headerlink" title="Technical challenges and Initial Solution"></a>Technical challenges and Initial Solution</h2><p>If you are the director of data engineer for your company’s internal operation, it makes sense to set up an Apache Airflow or subscribe to a managed service by Astronomer or Google Cloud Platform.</p>
+<p>Instead, we are a lean team helping others to solve the data integrations of the cloud applications in the long-tail. Simultaneously serving the data pipelines for many different clients change the technical requirements by a lot. The most important part is to provide separate CPU, memory, and storage capacities for each client. We wanted to achieve so with maximum flexibility: When we started, we only had a few data pipelines to manage, but we were expecting the number to rapidly grow.</p>
+<h3 id="AWS-Lambda-vs-Fargate"><a href="#AWS-Lambda-vs-Fargate" class="headerlink" title="AWS Lambda vs. Fargate"></a>AWS Lambda vs. Fargate</h3><p>As you might have guessed, we went for a serverless approach, and our first prototype used Amazon Web Services (AWS) Lambda. It was quick to implement. The pay-as-you-go pricing was very attractive instead of idling the virtual machine and deal with the auto-scaling reliably at peak-time. But we soon realized that Lambda has a 15 minutes limit on the execution and it is not a viable platform to run a long-running process.</p>
+<p>So we switched to Fargate, another pay-as-you-go serverless platform by AWS. It has no time limit and the life-cycle management of the computing resource and the scaling of it is fully managed by the platform.</p>
+<p>Compared to Lambda, Fargate’s deployment process is much more complex: While Lambda could be deployed after writing a single file script in the programming language of your choice, Fargate deployment involves creating a Docker image, pushing the image to Elastic Container Registry, creating resources like Virtual Private Cloud and Security Groups, defining the Fargate task and managing the Policy.</p>
+<h2 id="Birth-of-handoff-A-Serverless-Data-Pipeline-Orchestration-Framework"><a href="#Birth-of-handoff-A-Serverless-Data-Pipeline-Orchestration-Framework" class="headerlink" title="Birth of handoff: A Serverless Data Pipeline Orchestration Framework"></a>Birth of handoff: A Serverless Data Pipeline Orchestration Framework</h2><p>The intricated Fargate deployment gave us an idea of implementing a command-line interface (CLI) that we named “handoff”. handoff simplifies the development and deployment steps for AWS Fargate. We are also thinking to provide a multi-cloud capability in the future: handoff unifies the commands to deploy to AWS, Microsoft Azure, Google Cloud Platform, and so on.</p>
+<p>handoff describes the data pipeline logic in a YAML file. The first thing you would describe is the installation of the modules required by the pipeline:</p>
+<p><code>project.yml:</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">version: 0.3</span><br><span class="line">description: Fetch foreign exchange rates</span><br><span class="line"></span><br><span class="line">installs:</span><br><span class="line">- venv: extractor</span><br><span class="line">  command: pip install tap-exchangeratesapi</span><br><span class="line">- venv: loader</span><br><span class="line">  command: pip install target-bigquery-partition</span><br></pre></td></tr></table></figure>
+
+<p>As you can see, handoff is created primarily for Python. Multiple virtual environments can be automatically generated if you want to install modules in separate environments. In the local testing, the installation is as easy as running:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">handoff workspace install --project &lt;project_dir&gt; --workspace &lt;workspace_dir&gt;</span><br></pre></td></tr></table></figure>
+
+<p>The body of the pipeline logic is groups of tasks in which each command can be linked as Unix pipeline:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tasks:</span><br><span class="line">- name: fetch_exchange_rates</span><br><span class="line">  description: Fetch exchange rates and load on BigQuery</span><br><span class="line">  pipeline:</span><br><span class="line">  - command: tap-exchangeratesapi</span><br><span class="line">    args: --config files&#x2F;tap-config.json</span><br><span class="line">    venv: extractor</span><br><span class="line">  - command: &quot;target-bigquery --config files&#x2F;target_config.json&quot;</span><br><span class="line">    venv: loader</span><br></pre></td></tr></table></figure>
+
+<p>This is particularly useful in deploying memory-efficient tasks such as the ELT task by singer.io framework.</p>
+<p>Running locally is as easy as:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">handoff run local -p &lt;project_dir&gt; -w &lt;workspace_dir&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Doing-more-than-a-simple-data-replication-task"><a href="#Doing-more-than-a-simple-data-replication-task" class="headerlink" title="Doing more than a simple data replication task"></a>Doing more than a simple data replication task</h3><p>handoff also implements simple control flow such as for-each and fork. And of course, you can define a task beyond simple ETL. Look how we automate the task of fetching stock market data, make a GIF animation, and post on Twitter:</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A fun demo: handoff&#39;s <a href="https://twitter.com/hashtag/datapipeline?src=hash&amp;ref_src=twsrc%5Etfw" target="_blank" rel="noopener">#datapipeline</a> can automatically harvest data and post data-driven content to Twitter <a href="https://twitter.com/hashtag/etl?src=hash&amp;ref_src=twsrc%5Etfw" target="_blank" rel="noopener">#etl</a> <a href="https://twitter.com/hashtag/analytics?src=hash&amp;ref_src=twsrc%5Etfw" target="_blank" rel="noopener">#analytics</a>. <a href="https://t.co/0ITR771mh9" target="_blank" rel="noopener">pic.twitter.com/0ITR771mh9</a></p>&mdash; handoff (@handoffcloud) <a href="https://twitter.com/handoffcloud/status/1377477316448636935?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">April 1, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2 id="Deployment-features"><a href="#Deployment-features" class="headerlink" title="Deployment features"></a>Deployment features</h2><p>We would estimate that authoring a pipeline logic is just 20% of the whole ETL development. More work has to be done to manage:</p>
+<ul>
+<li>Run-time configuration</li>
+<li>Secret keys</li>
+<li>Scheduling</li>
+<li>Logging</li>
+<li>Monitoring</li>
+<li>Containerization</li>
+</ul>
+<p>and the list goes on. handoff’s project.yml helps to keep things organized and it is intuitive to understand:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vars:</span><br><span class="line">- key: gcp_project_id</span><br><span class="line">  value: &quot;handoff-demo&quot;</span><br><span class="line">- key: dataset_id</span><br><span class="line">  value: exchangerate</span><br><span class="line"></span><br><span class="line">envs:</span><br><span class="line">- key: GOOGLE_APPLICATION_CREDENTIALS</span><br><span class="line">  value: files&#x2F;google_client_secret.json</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  cloud_provider: aws</span><br><span class="line">  cloud_platform: fargate</span><br><span class="line">  resource_group: handoff-etl</span><br><span class="line">  container_image: tap-rest-api-target-bigquery</span><br><span class="line">  task: usgs-earthquakes</span><br><span class="line"></span><br><span class="line">schedules:</span><br><span class="line">- target_id: 1</span><br><span class="line">  description: Run everyday at 00:00:00Z</span><br><span class="line">  envs:</span><br><span class="line">  - key: __VARS</span><br><span class="line">    value: &#39;start_datetime&#x3D;$(date -Iseconds -d &quot;00:00 yesterday&quot;) end_datetime&#x3D;$(date -Iseconds -d &quot;00:00 today&quot;)&#39;</span><br><span class="line">  cron: &#39;0 0 * * ? *&#39;</span><br></pre></td></tr></table></figure>
+
+<p>The containerization and the deployment commands are also simple and intuitive:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Push project configuration, supporting files, and secrets to AWS</span><br><span class="line">handoff project push -p &lt;project_dir&gt;</span><br><span class="line"></span><br><span class="line"># Build a Docker image and push to ECR</span><br><span class="line">handoff container build -p &lt;project_dir&gt;</span><br><span class="line">handoff container push -p &lt;project_dir&gt;</span><br><span class="line"></span><br><span class="line"># Create resource group, bucket, task...</span><br><span class="line">handoff cloud bucket create -p &lt;project_dir&gt;</span><br><span class="line">handoff cloud resources create -p &lt;project_dir&gt;</span><br><span class="line">handoff cloud task create -p &lt;project_dir&gt;</span><br><span class="line"></span><br><span class="line"># Schedule a task</span><br><span class="line">handoff cloud schedule create -p &lt;project_dir&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Without handoff, you would need to author Cloud Formation file, boto3 commands to handle file transfer to S3, encrypt and store the secrets, configure the CloudWatch for logging and metrics, etc to securely deploy the task and monitor the execution.</p>
+<p>For a full tutorial, please visit <a href="https://dev.handoff.cloud" target="_blank" rel="noopener">https://dev.handoff.cloud</a></p>
+<p>We made handoff <a href="https://github.com/anelendata/handoff" target="_blank" rel="noopener">a public project on GitHub</a> so every engineer having a similar challenge can use it. We also welcome collaborators to improve this new framework.</p>
+<p><img src="/images/this_is_handoff.png" alt="handoff"></p>
+<h2 id="What’s-next"><a href="#What’s-next" class="headerlink" title="What’s next?"></a>What’s next?</h2><p>As we mentioned earlier, we are thinking to support deployment to other cloud platforms such as Microsoft Azure and Google Cloud Platform. Unifying the deployment command for multi-cloud would be very useful in quickly switching the platform.</p>
+<p>We also prototyped a web UI built on top of the CLI:</p>
+<p><img src="/images/handoff-ui.gif" alt="handoff ui"></p>
+<p>The web UI could be running as a stand-alone application on your local machine as it connects to the cloud resources in the backend, keeping the serverless philosophy. It can also be hosted on a server for enterprise use cases.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>AWS Fargate let us create a cost-effective and scalable solution for ETL deployment, but it hasn’t been a popular approach due to the complex deployment process. handoff, a serverless data pipeline orchestration framework simplifies the process. It also manages facilitates the various aspects of the orchestration such as security and monitoring. We made handoff an open-source project so that the data engineering community can benefit from the framework and collaborate for futher innovation.</p>
+</div></div></div></div><div class="paginator"><a class="next" href="/What-is-P-in-ELTP-Process/">NEXT</a></div><div class="container"><section class="services"><div class="row"><div class="col"><h2>Next: Find out how we can help you</h2></div></div><div class="row articles"><div class="col-sm-6 col-md-4 item text-center"><a href="https://anelen.co/data-engineering.html" target="_self"><img class="img-fluid" src="https://anelen.co/assets/img/analytics_infra.png"></a><a href="https://anelen.co/data-engineering.html" target="_self"><h3 class="name">Data Engineering</h3></a></div><div class="col-sm-6 col-md-4 item text-center"><a href="https://anelen.co/analytics.html" target="_self"><img class="img-fluid" src="https://anelen.co/assets/img/cohort.png"></a><a href="https://anelen.co/analytics.html" target="_self"><h3 class="name">Analytics</h3></a></div><div class="col-sm-6 col-md-4 item text-center"><a href="https://anelen.co/stats_ml.html" target="_self"><img class="img-fluid" src="https://anelen.co/assets/img/measure-effect.png"></a><a href="https://anelen.co/stats_ml.html" target="_self"><h3 class="name">Statistical analysis & machine learning</h3></a></div></div></section></div><section class="call-to-action text-white text-center" style="background-size: cover;background-image: url('https://anelen.co/assets/img/bg_ebbtide.jpg');">
+        <div class="overlay"></div>
+        <div class="col-xl-9 mx-auto">
+            <div class="contact-clean" style="background-color: transparent;">
+                <div class="row">
+                    <div class="col-lg-7 offset-lg-0 text-left mx-auto">
+                        <form id="mc-embedded-subscribe-form" class="validate" action="https://anelen.us17.list-manage.com/subscribe/post?u=2741faf384c559d5568e7998e&amp;amp;id=1e4c20cbb2" method="post" name="mc-embedded-subscribe-form" target="_blank" style="background-color: rgb(248,249,250);">
+                            <h1 style="font-size: 2rem;"><strong>Keep up with data technology trends with our newsletter</strong></h1>
+                            <p>&nbsp;<a href="https://mailchi.mp/7d2fc647ee87/something-to-share-on-happy-1-year-381009" target="_blank">Sample Newsletter</a></p>
+                            <div class="form-group"><label for="mce-FNAME">First name</label><input class="form-control" type="text" id="mce-FNAME" name="FNAME" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"></div>
+                            <div class="form-group"><label for="mce-LNAME">Last name</label><input class="form-control" type="text" id="mce-LNAME" name="LNAME"></div>
+                            <div class="form-group"><label for="mce-EMAIL">Email (required)</label><input class="form-control" type="email" id="mce-EMAIL" name="EMAIL" required="required"></div><button class="btn btn-primary" id="mc-embedded-subscribe" type="submit">get it!</button>
+                            <div style="position: absolute;left: -5000px;" area-hidden="true"><input class="form-control" type="text" name="b_2741faf384c559d5568e7998e_1e4c20cbb2" tabindex="-1"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+<footer class="footer bg-light">        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-auto h-100 text-center text-lg-left">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item"><a style="color: #00599C;" href="https://anelen.co/about.html" target="_blank" rel="noopener">About</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a style="color: #00599C;" href="mailto:hello@anelen.co">Contact</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a style="color: #00599C;" href="https://www.iubenda.com/privacy-policy/8056022" target="_blank" rel="noopener">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 my-auto h-100 text-center text-lg-right">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/company/anelen/" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-2x fa-fw" style="color: #00599C;"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/anelendatascience/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-2x fa-fw" style="color: #00599C;"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/anelendata" target="_blank" rel="noopener"><i class="fa fa-twitter fa-2x fa-fw" style="color: #00599C;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<div class="container"><div class="copyright"><p>© 2017 - 2021 ANELEN Co., LLC</p></div></div></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script><script src="https://anelen.co/assets/js/script.min.js"></script></body></html>
