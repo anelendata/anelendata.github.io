@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://articles.anelen.co/"/>
-  <updated>2021-04-01T04:45:59.963Z</updated>
+  <updated>2021-04-01T13:55:56.532Z</updated>
   <id>http://articles.anelen.co/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>handoff: Connecting Cloud Data at Scale without Managing a Cluster</title>
+    <title>handoff: Bringing the data together from Cloud Services without Managing a Cluster</title>
     <link href="http://articles.anelen.co/Scaling-ETL-without-Managing-a-Cluster/"/>
     <id>http://articles.anelen.co/Scaling-ETL-without-Managing-a-Cluster/</id>
     <published>2021-03-20T20:47:40.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.532Z</updated>
     
     <summary type="html">
     
@@ -30,7 +30,7 @@
         
         
           &lt;p&gt;&lt;img src=&quot;/images/keep-flowing-handoff.gif&quot; alt=&quot;data flow&quot;&gt;&lt;/p&gt;
-&lt;p&gt;This article describes a way
+&lt;p&gt;This article presents the
         
       
     
@@ -45,7 +45,7 @@
     <link href="http://articles.anelen.co/What-is-P-in-ELTP-Process/"/>
     <id>http://articles.anelen.co/What-is-P-in-ELTP-Process/</id>
     <published>2021-02-13T01:53:30.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.532Z</updated>
     
     <summary type="html">
     
@@ -79,7 +79,7 @@
     <link href="http://articles.anelen.co/Anelen-is-4-years-old-and-embracing-Open-Innovation/"/>
     <id>http://articles.anelen.co/Anelen-is-4-years-old-and-embracing-Open-Innovation/</id>
     <published>2021-02-06T06:03:51.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.532Z</updated>
     
     <summary type="html">
     
@@ -108,7 +108,7 @@
     <link href="http://articles.anelen.co/elt-google-cloud-storage-bigquery/"/>
     <id>http://articles.anelen.co/elt-google-cloud-storage-bigquery/</id>
     <published>2020-06-25T20:12:36.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.532Z</updated>
     
     <summary type="html">
     
@@ -132,7 +132,7 @@
     <link href="http://articles.anelen.co/kinoko_webcrawler/"/>
     <id>http://articles.anelen.co/kinoko_webcrawler/</id>
     <published>2020-05-12T07:00:00.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.532Z</updated>
     
     <summary type="html">
     
@@ -155,7 +155,7 @@
     <link href="http://articles.anelen.co/kinoko-io-etl/"/>
     <id>http://articles.anelen.co/kinoko-io-etl/</id>
     <published>2020-01-27T08:00:00.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.532Z</updated>
     
     <summary type="html">
     
@@ -178,7 +178,7 @@
     <link href="http://articles.anelen.co/a-case-for-human-data-science/"/>
     <id>http://articles.anelen.co/a-case-for-human-data-science/</id>
     <published>2018-10-21T07:00:00.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.532Z</updated>
     
     <summary type="html">
     
@@ -202,7 +202,7 @@
     <link href="http://articles.anelen.co/data-sprint/"/>
     <id>http://articles.anelen.co/data-sprint/</id>
     <published>2018-09-27T18:19:09.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.532Z</updated>
     
     <summary type="html">
     
@@ -226,7 +226,7 @@
     <link href="http://articles.anelen.co/product-analytics-101/"/>
     <id>http://articles.anelen.co/product-analytics-101/</id>
     <published>2017-07-11T07:00:00.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.536Z</updated>
     
     <summary type="html">
     
@@ -250,7 +250,7 @@
     <link href="http://articles.anelen.co/online-experiments/"/>
     <id>http://articles.anelen.co/online-experiments/</id>
     <published>2017-06-27T07:00:00.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.536Z</updated>
     
     <summary type="html">
     
@@ -273,7 +273,7 @@
     <link href="http://articles.anelen.co/data-democratization/"/>
     <id>http://articles.anelen.co/data-democratization/</id>
     <published>2017-06-20T07:00:00.000Z</published>
-    <updated>2021-04-01T04:45:59.963Z</updated>
+    <updated>2021-04-01T13:55:56.532Z</updated>
     
     <summary type="html">
     
