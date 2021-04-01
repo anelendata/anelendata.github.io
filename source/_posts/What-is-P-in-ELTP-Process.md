@@ -26,7 +26,7 @@ I'm adding P to ELT, and it's "Publishing". It's the process of publishing the p
 
 ## ELT does not solve the "Data Last-mile Problem"
 
-Let me expand this by a realistic business scenario: Product Qualifying Lead scoring (PQL scoring).
+Let me expand this by a realistic business scenario: Product Qualified Lead scoring (PQL scoring).
 
 Suppose your company is a Software-as-a-Service (SaaS) company. The service is free to sign up to use the basic feature. Your potential customer finds your service through an online ad. Sign up is free but the user must enter their work email and business information.
 
@@ -64,7 +64,7 @@ In the near future, would expect there will be more new businesses providing no-
 
 ## A Fun Demonstration
 
-Here is a fun demonstration of solving the "last-mile problem" of making use of data. These GIF animations are created and posted on Twitter automatically at specified intervals. We extract the data from the sources (geological and financial), transform the data (including the part to produce the animation), and deliver to where it matters (social media).
+Here is a fun demonstration of solving the "last-mile problem" of making use of data. These GIF animations are created and posted on Twitter automatically at specified intervals. We extract the data from the sources (geological and financial), transform the data (including the part to produce the animation), and deliver it to where it matters (social media).
 
 [![usgs](/images/usgs-twitter.gif)](https://twitter.com/AnelenData/status/1359405517915971586)
 
