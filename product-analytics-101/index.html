@@ -36,11 +36,11 @@
 <meta property="og:description" content="As a product manager (PM) of a web or mobile application, you want to ensure the application design offers the user experience (UX) that is not confusing and pleasant to use. A successful application">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://anelen.co/assets/img/leaking_bucket.png">
-<meta property="og:image" content="https://media-exp1.licdn.com/dms/image/C5612AQF257X3VVAGjw/article-inline_image-shrink_1500_2232/0?e=1596067200&v=beta&t=bg8AY28DWYqkqlLP8rJ0pRuTHrQOod5D-Oo9N96-Iyo">
-<meta property="og:image" content="https://media-exp1.licdn.com/dms/image/C5612AQFLUGi_Qr7LcA/article-inline_image-shrink_1500_2232/0?e=1596067200&v=beta&t=l4AgNrR93kJ716RQaS2la_vooargC6c1vb7aKo55VJY">
-<meta property="og:image" content="https://media-exp1.licdn.com/dms/image/C5612AQGc_Szo7A4p9g/article-inline_image-shrink_1000_1488/0?e=1596067200&v=beta&t=hZpyeVFsMuEWEuXqtOXrZXtAAYO-ErrGwKXNx1u0IYc">
+<meta property="og:image" content="http://articles.anelen.co/images/kayak.png">
+<meta property="og:image" content="http://articles.anelen.co/images/funnel.png">
+<meta property="og:image" content="http://articles.anelen.co/images/user_events.png">
 <meta property="article:published_time" content="2017-07-11T07:00:00.000Z">
-<meta property="article:modified_time" content="2023-01-13T06:13:36.901Z">
+<meta property="article:modified_time" content="2023-01-13T06:18:07.213Z">
 <meta property="article:author" content="ANELEN Co., LLC">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
@@ -74,7 +74,7 @@
 <p>And record key user events It’s not too difficult. Let’s take an example of a travel booking app.</p>
 <h2 id="Travel-booking-example"><a href="#Travel-booking-example" class="headerlink" title="Travel booking example"></a>Travel booking example</h2><p>I sometimes use Kayak to book flights. One of their appealing features is to forecast the ticket prices. A notification is sent to the user to suggest when to buy. (I am making up the details of how it works from here. It is probably different from the reality)</p>
 <p>Suppose the alert comes in as a notification on my phone if I had installed the app beforehand. By tapping the notification, the app opens and I will go through a few screens like this before I buy the ticket:</p>
-<p><img src="https://media-exp1.licdn.com/dms/image/C5612AQF257X3VVAGjw/article-inline_image-shrink_1500_2232/0?e=1596067200&v=beta&t=bg8AY28DWYqkqlLP8rJ0pRuTHrQOod5D-Oo9N96-Iyo" alt="kayak"></p>
+<p><img src="/images/kayak.png" alt="kayak"></p>
 <p>Did you notice that on the first screen from the left, it says, “Our advice Buy” with an icon to indicate that the price will go up? Let’s pretend that you are the PM and wants to test if such advice will drive the most important business goal: the sales.</p>
 <p>In fact, you even ran an <a href="https://articles.anelen.co/online-experiments/">A/B test</a> to see if “Our advice Buy” increases the number of sales closed, which is your product goal. The test came in positive, but the increase in sales was not as much as you had expected. What is going on?</p>
 <p>Assuming there are more users persuaded to buy the ticket by the recommendation than the actual sales, you imagine several scenarios happening among users who entered the booking process in the app.</p>
@@ -98,7 +98,7 @@
 You need to select the user events wisely.</li>
 </ul>
 <h2 id="How-to-select-key-user-events"><a href="#How-to-select-key-user-events" class="headerlink" title="How to select key user events?"></a>How to select key user events?</h2><p>The easiest way to select the key user events is to create a “funnel” towards achieving of the user goal. In flight booking app example, it would look like this:</p>
-<p><img src="https://media-exp1.licdn.com/dms/image/C5612AQFLUGi_Qr7LcA/article-inline_image-shrink_1500_2232/0?e=1596067200&v=beta&t=l4AgNrR93kJ716RQaS2la_vooargC6c1vb7aKo55VJY" alt="funnel"></p>
+<p><img src="/images/funnel.png" alt="funnel"></p>
 <p>At the beginning of the booking process, the number of users interacting with the app are much higher than the number of users completing the user goal of booking flight (or sales). So the top is wider than the bottom, therefore the funnel analogy. Just notice that the funnel is a leaking funnel. For every page in the app, latency, and expected user input, there is a risk of the user falling out of the process.</p>
 <p>Draw the funnel of your app and identify:</p>
 <ol>
@@ -107,7 +107,7 @@ You need to select the user events wisely.</li>
 </ol>
 <p>Those will become the minimal set of user events for you to start understanding what is going on.</p>
 <h2 id="Adding-attributes-to-the-events"><a href="#Adding-attributes-to-the-events" class="headerlink" title="Adding attributes to the events"></a>Adding attributes to the events</h2><p>After you have the user event logs from many different users, you will need to tie the one step to the next in the funnel for each unique transaction. Your user event comes into the server like this:</p>
-<p><img src="https://media-exp1.licdn.com/dms/image/C5612AQGc_Szo7A4p9g/article-inline_image-shrink_1000_1488/0?e=1596067200&v=beta&t=hZpyeVFsMuEWEuXqtOXrZXtAAYO-ErrGwKXNx1u0IYc" alt="user events"></p>
+<p><img src="/images/user_events.png" alt="user events"></p>
 <p>Here, you need to pick the Distinct ID of 1234 and thread them in order to identify where the user is dropping off from the funnel or completing the user goal. It would also be helpful if you include additional attributes such as Experiment Group in the example to group the user of the interest to see there is a difference in the performance.</p>
 <h2 id="Get-the-insight"><a href="#Get-the-insight" class="headerlink" title="Get the insight"></a>Get the insight</h2><p>In the flight booking app example, you may find the following things by analyzing the user event:</p>
 <ol>
