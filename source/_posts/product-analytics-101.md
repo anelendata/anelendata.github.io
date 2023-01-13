@@ -5,6 +5,7 @@ tags:
 ---
 ![leaking bucket](https://anelen.co/assets/img/leaking_bucket.png)
 
+
 As a product manager (PM) of a web or mobile application, you want to ensure the application design offers the user experience (UX) that is not confusing and pleasant to use. A successful application helps your company's key performance indicators to go up. But how do you know if it is working in the field?
 
 In the design phase, you may rely on UX designer's knowledge and skills. During the internal test, you can count on your trained eye as a product person and your coworkers as test users. But the real test always takes place after the app is released.
