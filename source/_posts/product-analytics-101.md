@@ -27,7 +27,7 @@ I sometimes use Kayak to book flights. One of their appealing features is to for
 
 Suppose the alert comes in as a notification on my phone if I had installed the app beforehand. By tapping the notification, the app opens and I will go through a few screens like this before I buy the ticket:
 
-![kayak](https://media-exp1.licdn.com/dms/image/C5612AQF257X3VVAGjw/article-inline_image-shrink_1500_2232/0?e=1596067200&v=beta&t=bg8AY28DWYqkqlLP8rJ0pRuTHrQOod5D-Oo9N96-Iyo)
+![kayak](/images/kayak.png)
 
 Did you notice that on the first screen from the left, it says, "Our advice Buy" with an icon to indicate that the price will go up? Let's pretend that you are the PM and wants to test if such advice will drive the most important business goal: the sales.
 
@@ -66,7 +66,7 @@ You need to select the user events wisely.
 
 The easiest way to select the key user events is to create a "funnel" towards achieving of the user goal. In flight booking app example, it would look like this:
 
-![funnel](https://media-exp1.licdn.com/dms/image/C5612AQFLUGi_Qr7LcA/article-inline_image-shrink_1500_2232/0?e=1596067200&v=beta&t=l4AgNrR93kJ716RQaS2la_vooargC6c1vb7aKo55VJY)
+![funnel](/images/funnel.png)
 
 At the beginning of the booking process, the number of users interacting with the app are much higher than the number of users completing the user goal of booking flight (or sales). So the top is wider than the bottom, therefore the funnel analogy. Just notice that the funnel is a leaking funnel. For every page in the app, latency, and expected user input, there is a risk of the user falling out of the process.
 
@@ -81,7 +81,7 @@ Those will become the minimal set of user events for you to start understanding 
 
 After you have the user event logs from many different users, you will need to tie the one step to the next in the funnel for each unique transaction. Your user event comes into the server like this:
 
-![user events](https://media-exp1.licdn.com/dms/image/C5612AQGc_Szo7A4p9g/article-inline_image-shrink_1000_1488/0?e=1596067200&v=beta&t=hZpyeVFsMuEWEuXqtOXrZXtAAYO-ErrGwKXNx1u0IYc)
+![user events](/images/user_events.png)
 
 Here, you need to pick the Distinct ID of 1234 and thread them in order to identify where the user is dropping off from the funnel or completing the user goal. It would also be helpful if you include additional attributes such as Experiment Group in the example to group the user of the interest to see there is a difference in the performance.
 
